@@ -2,8 +2,6 @@
 
 A stunning, fully responsive dark-mode portfolio website built with React, Vite, Framer Motion, and TailwindCSS. Features smooth animations, glassmorphism design, and a modern aesthetic.
 
-![Portfolio Preview](https://via.placeholder.com/1200x600/1e1e2e/0ea5e9?text=Portfolio+Preview)
-
 ## ✨ Features
 
 - 🎨 **Modern Dark Theme** with glassmorphism effects
