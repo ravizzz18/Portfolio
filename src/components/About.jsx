@@ -13,32 +13,25 @@ const About = () => {
   const skills = [
     'React', 'JavaScript', 'TypeScript', 'Node.js', 
     'TailwindCSS', 'HTML5', 'CSS3', 'Git',
-    'MongoDB', 'Express', 'REST APIs', 'Responsive Design'
+    'MongoDB', 'Express', 'Java', 'C', 'C++', 'Python', 'Canva'
   ];
 
   // Timeline data
   const timeline = [
     {
       icon: FaGraduationCap,
-      title: 'Bachelor\'s in Computer Science',
-      organization: 'University Name',
-      period: '2019 - 2023',
-      type: 'education'
+      title: 'Bachelor\'s in Artificial Intelligence and Machine Learning',
+      organization: 'B M S Institute of Technology and Management',
+      period: '2024 - 2028',
+      type: 'Education'
     },
     {
       icon: FaBriefcase,
-      title: 'Frontend Developer',
-      organization: 'Company Name',
-      period: '2023 - Present',
+      title: 'P R Team and Event Organisation',
+      organization: 'Alterino - BMSIT&M',
+      period: '2025 - Present',
       type: 'experience'
     },
-    {
-      icon: FaBriefcase,
-      title: 'Web Development Intern',
-      organization: 'Startup Name',
-      period: '2022 - 2023',
-      type: 'experience'
-    }
   ];
 
   return (
@@ -69,18 +62,13 @@ const About = () => {
                 Get to know me!
               </h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                I'm a passionate Frontend Developer with a love for creating beautiful, 
-                functional, and user-friendly websites. With expertise in modern web technologies, 
-                I transform ideas into engaging digital experiences.
+                I'm a passionate AI and Full Stack Developer with a love for creating beautiful, functional, and user-friendly projects. With expertise in modern web technologies, I transform ideas into engaging digital experiences.
               </p>
               <p className="text-gray-300 leading-relaxed mb-6">
-                I specialize in building responsive web applications using React, JavaScript, 
-                and modern CSS frameworks. My goal is to write clean, maintainable code that 
-                delivers exceptional user experiences across all devices.
+                I work across both frontend development and AI/ML. On the web side, I build responsive, user-centric interfaces using HTML, CSS, JavaScript, and React. As an AIML student, I also explore machine learning models, data-driven solutions, and AI-powered applications. Whether it’s crafting clean UI components or experimenting with intelligent systems, I enjoy combining design, code, and innovation to create meaningful digital experiences.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing 
-                to open-source projects, or sharing knowledge with the developer community.
+              Outside of work, you'll find me exploring new technologies, on the football field, enjoying good music, or relaxing with the people i care about. These activities keep me creative, active, and balanced.
               </p>
             </div>
 

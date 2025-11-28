@@ -66,7 +66,7 @@ const Hero = () => {
               transition={{ delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold mb-4"
             >
-              <span className="gradient-text">Ravindra</span>
+              <span className="gradient-text">Ravindra A</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -76,7 +76,7 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6"
             >
-              Frontend Developer | Web Enthusiast
+              AI & Full-Stack Developer | Tech Enthusiast
             </motion.h2>
 
             {/* Description */}
@@ -86,8 +86,8 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-gray-400 text-lg mb-8 max-w-xl"
             >
-              I craft beautiful, responsive web experiences with modern technologies. 
-              Passionate about creating intuitive user interfaces and bringing ideas to life through code.
+              I enjoy exploring the world of Artificial Intelligence, Machine Learning, and Web Development.
+              I love building meaningful projects, experimenting with new technologies, and constantly improving my skills.
             </motion.p>
 
             {/* Buttons */}
@@ -144,7 +144,7 @@ const Hero = () => {
                 {/* Placeholder Image */}
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://via.placeholder.com/400x400/1e1e2e/0ea5e9?text=Your+Photo"
+                    src="/Portfolio/IMG_0224.png"
                     alt="Ravindra"
                     className="w-full h-full object-cover rounded-full"
                   />
