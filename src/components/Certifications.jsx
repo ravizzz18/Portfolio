@@ -171,23 +171,19 @@ const Certifications = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto"
         >
-          <div className="glass-card p-6 text-center">
+          <div className="glass-card p-8 text-center">
             <div className="text-4xl font-bold gradient-text mb-2">6+</div>
             <div className="text-gray-400 text-sm">Certifications</div>
           </div>
-          <div className="glass-card p-6 text-center">
+          <div className="glass-card p-8 text-center">
             <div className="text-4xl font-bold gradient-text mb-2">15+</div>
             <div className="text-gray-400 text-sm">Projects Completed</div>
           </div>
-          <div className="glass-card p-6 text-center">
+          <div className="glass-card p-8 text-center">
             <div className="text-4xl font-bold gradient-text mb-2">2+</div>
             <div className="text-gray-400 text-sm">Years Experience</div>
-          </div>
-          <div className="glass-card p-6 text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">100%</div>
-            <div className="text-gray-400 text-sm">Client Satisfaction</div>
           </div>
         </motion.div>
       </div>

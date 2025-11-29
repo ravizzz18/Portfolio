@@ -16,7 +16,7 @@ const Preloader = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-6xl font-bold gradient-text mb-4">R</h1>
+          <h1 className="text-6xl font-bold gradient-text mb-4">⎊</h1>
         </motion.div>
         
         {/* Loading Spinner */}

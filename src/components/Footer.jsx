@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHeart, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaHeart, FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,9 +14,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: FaGithub, url: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: FaLinkedin, url: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: FaTwitter, url: 'https://twitter.com/yourusername', label: 'Twitter' },
+    { icon: FaGithub, url: 'https://github.com/ravizzz18', label: 'GitHub' },
+    { icon: FaLinkedin, url: 'https://linkedin.com/in/ravizzz', label: 'LinkedIn' },
+    { icon: FaInstagram, url: 'https://instagram.com/ravizzz___18', label: 'Instagram' },
   ];
 
   return (
@@ -26,9 +26,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold gradient-text mb-4">Ravindra</h3>
+            <h3 className="text-2xl font-bold gradient-text mb-4">Ravindra A</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Frontend Developer passionate about creating beautiful and functional web experiences.
+              AIML and Frontend Developer passionate about creating ideas into beautiful and functional projects.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ const Footer = () => {
           </p>
           
           <p className="text-gray-400 text-sm flex items-center gap-1">
-            Made with <FaHeart className="text-red-500 animate-pulse" /> using React & Tailwind
+            Made with <FaHeart className="text-red-500 animate-pulse" /> by Ravindra
           </p>
         </div>
       </div>

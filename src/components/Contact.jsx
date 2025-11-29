@@ -35,11 +35,10 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      // EmailJS configuration - Replace with your actual values
-      // Get these from https://www.emailjs.com/
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      // EmailJS configuration
+      const serviceId = 'service_t85ivn9';
+      const templateId = 'template_ib98dmt';
+      const publicKey = 'w72UV79y__WgBcHSo';
 
       await emailjs.send(
         serviceId,
@@ -78,17 +77,16 @@ const Contact = () => {
 
   // Social links
   const socialLinks = [
-    { icon: FaGithub, url: 'https://github.com/yourusername', label: 'GitHub', color: 'hover:text-gray-400' },
-    { icon: FaLinkedin, url: 'https://linkedin.com/in/yourusername', label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { icon: FaTwitter, url: 'https://twitter.com/yourusername', label: 'Twitter', color: 'hover:text-sky-400' },
-    { icon: FaInstagram, url: 'https://instagram.com/yourusername', label: 'Instagram', color: 'hover:text-pink-400' },
+    { icon: FaGithub, url: 'https://github.com/ravizzz18', label: 'GitHub', color: 'hover:text-gray-400' },
+    { icon: FaLinkedin, url: 'https://linkedin.com/in/ravizzz', label: 'LinkedIn', color: 'hover:text-blue-400' },
+    { icon: FaInstagram, url: 'https://instagram.com/ravizzz___18', label: 'Instagram', color: 'hover:text-pink-400' },
   ];
 
   // Contact info
   const contactInfo = [
-    { icon: FaEnvelope, text: 'your.email@example.com', href: 'mailto:your.email@example.com' },
-    { icon: FaPhone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: FaMapMarkerAlt, text: 'Your City, Country', href: null },
+    { icon: FaEnvelope, text: 'ravindraaraj18@gmail.com', href: 'mailto:ravindraaraj18@gmail.com' },
+    { icon: FaPhone, text: '+91 9380804629', href: 'tel:+919380804629' },
+    { icon: FaMapMarkerAlt, text: 'Bengaluru, India', href: null },
   ];
 
   return (
@@ -136,7 +134,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-dark-300 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"
-                    placeholder="John Doe"
+                    placeholder="your name"
                   />
                 </div>
 
@@ -153,7 +151,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-dark-300 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"
-                    placeholder="john@example.com"
+                    placeholder="your.email@example.com"
                   />
                 </div>
 
