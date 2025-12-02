@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHeart, FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaHeart, FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaStar } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -80,7 +80,7 @@ const Footer = () => {
           </p>
           
           <p className="text-gray-400 text-sm flex items-center gap-1">
-            Made with <FaHeart className="text-red-500 animate-pulse" /> by Ravindra
+            Dream. Code. Achieve <FaStar className="text-yellow-500 animate-pulse" />
           </p>
         </div>
       </div>

@@ -94,7 +94,7 @@ const Certifications = () => {
           {/* Left Arrow */}
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 flex items-center justify-center hover:bg-primary/40 transition-all duration-300 hidden md:flex"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 items-center justify-center hover:bg-primary/40 transition-all duration-300 hidden md:flex"
           >
             <FaChevronLeft className="text-white text-xl" />
           </button>
@@ -102,7 +102,7 @@ const Certifications = () => {
           {/* Right Arrow */}
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 flex items-center justify-center hover:bg-primary/40 transition-all duration-300 hidden md:flex"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 items-center justify-center hover:bg-primary/40 transition-all duration-300 hidden md:flex"
           >
             <FaChevronRight className="text-white text-xl" />
           </button>
