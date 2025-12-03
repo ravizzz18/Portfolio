@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: 'Amazon Clone',
       description: 'Amazon Landing Page Clone',
-      image: '/Portfolio/Screenshot 2025-12-03 232358.png',
+      image: '/Screenshot 2025-12-03 232358.png',
       tags: ['HTML', 'CSS'],
       github: 'https://github.com/ravizzz18/Amazon-Clone.git',
       demo: '#',
@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: 'Number System Converter',
       description: 'My first ever project — a small Number System Converter (binary, decimal, hex, etc.).',
-      image: '/Portfolio/Screenshot 2025-12-03 232127.png',
+      image: '/Screenshot 2025-12-03 232127.png',
       tags: ['HTML', 'CSS', 'JavaScript'],
       github: 'https://github.com/ravizzz18/Number-System-Converter.git',
       demo: 'https://number-system-converter-one.vercel.app/',

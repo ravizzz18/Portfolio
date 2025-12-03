@@ -144,7 +144,7 @@ const Hero = () => {
                 {/* Placeholder Image */}
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/Portfolio/IMG_0224.png"
+                    src="/IMG_0224.png"
                     alt="Ravindra"
                     className="w-full h-full object-cover rounded-full"
                   />

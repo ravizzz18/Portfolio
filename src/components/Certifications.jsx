@@ -17,35 +17,35 @@ const Certifications = () => {
       title: 'Workato Foundations Level 1',
       issuer: 'Workato',
       date: '2nd December 2025',
-      image: '/Portfolio/workato.jpg',
+      image: '/workato.jpg',
       credentialUrl: 'https://credentials.workato.com/18c58b49-090c-4403-a4ca-7bd8adc96522'
     },
     {
       title: 'Build and Conquer Hackathon Winner',
       issuer: 'Alterino - BMSIT&M',
       date: 'May 2025',
-      image: '/Portfolio/Build and Conqueror.jpg',
-      credentialUrl: '/Portfolio/Build and Conqueror.jpg'
+      image: '/Build and Conqueror.jpg',
+      credentialUrl: '/Build and Conqueror.jpg'
     },
     {
       title: 'Programming in C',
       issuer: 'Infosys Springboard',
       date: '2024',
-      image: '/Portfolio/Programming in C.jpg',
+      image: '/Programming in C.jpg',
       credentialUrl: 'https://verify.onwingspan.com/'
     },
     {
       title: 'Cyber Security and Applied Ethical Hacking',
       issuer: 'Infosys Springboard',
       date: '2024',
-      image: '/Portfolio/Cyber Security and Applied Ethical Hacking.jpg',
+      image: '/Cyber Security and Applied Ethical Hacking.jpg',
       credentialUrl: 'https://verify.onwingspan.com/'
     },
     {
       title: 'Learning Python',
       issuer: 'Infosys Springboard',
       date: '2025',
-      image: '/Portfolio/Learning Python.jpg',
+      image: '/Learning Python.jpg',
       credentialUrl: 'https://verify.onwingspan.com/'
     },
   ];
