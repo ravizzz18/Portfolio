@@ -21,11 +21,11 @@ const Certifications = () => {
       credentialUrl: 'https://credentials.workato.com/18c58b49-090c-4403-a4ca-7bd8adc96522'
     },
     {
-      title: 'Build and Hackathon Winner',
+      title: 'Build and Conquer Hackathon Winner',
       issuer: 'Alterino - BMSIT&M',
       date: 'May 2025',
       image: '/Portfolio/Build and Conqueror.jpg',
-      credentialUrl: '#'
+      credentialUrl: '/Portfolio/Build and Conqueror.jpg'
     },
     {
       title: 'Programming in C',

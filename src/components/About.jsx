@@ -12,7 +12,7 @@ const About = () => {
   // Skills data
   const skills = [
     'React', 'JavaScript', 'Node.js', 'HTML5', 'CSS3', 'Git',
-    'MongoDB', 'Java', 'C', 'C++', 'Python', 'Canva', 'Figma'
+    'MongoDB', 'Java', 'C', 'C++', 'Python', 'Canva', 'Figma', 'Docker'
   ];
 
   // Timeline data
