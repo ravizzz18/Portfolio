@@ -26,7 +26,7 @@ const About = () => {
     },
     {
       icon: FaBriefcase,
-      title: 'P R Team and Event Organisation',
+      title: 'P R Team',
       organization: 'Alterino - BMSIT&M',
       period: '2025 - Present',
       type: 'experience'
