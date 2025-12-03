@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaReact, FaNode, FaPython, FaDatabase, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma } from 'react-icons/fa';
+import { FaReact, FaNode, FaPython, FaDatabase, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaJava } from 'react-icons/fa';
 import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiFirebase } from 'react-icons/si';
 
 const Skills = () => {

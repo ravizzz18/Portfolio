@@ -187,7 +187,7 @@ const Projects = () => {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/ravizzz18"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block neon-button"

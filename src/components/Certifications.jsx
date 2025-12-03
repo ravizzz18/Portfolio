@@ -14,46 +14,39 @@ const Certifications = () => {
   // Certifications data
   const certifications = [
     {
-      title: 'Meta Frontend Developer Professional Certificate',
-      issuer: 'Meta (Facebook)',
-      date: '2023',
-      image: 'https://via.placeholder.com/400x300/1e1e2e/0ea5e9?text=Meta+Certificate',
+      title: 'Workato Foundations Level 1',
+      issuer: 'Workato',
+      date: '2nd December 2025',
+      image: '/Portfolio/workato.jpg',
+      credentialUrl: 'https://credentials.workato.com/18c58b49-090c-4403-a4ca-7bd8adc96522'
+    },
+    {
+      title: 'Build and Hackathon Winner',
+      issuer: 'Alterino - BMSIT&M',
+      date: 'May 2025',
+      image: '/Portfolio/Build and Conqueror.jpg',
       credentialUrl: '#'
     },
     {
-      title: 'React - The Complete Guide',
-      issuer: 'Udemy',
-      date: '2023',
-      image: 'https://via.placeholder.com/400x300/1e1e2e/8b5cf6?text=React+Course',
-      credentialUrl: '#'
+      title: 'Programming in C',
+      issuer: 'Infosys Springboard',
+      date: '2024',
+      image: '/Portfolio/Programming in C.jpg',
+      credentialUrl: 'https://verify.onwingspan.com/'
     },
     {
-      title: 'JavaScript Algorithms and Data Structures',
-      issuer: 'freeCodeCamp',
-      date: '2022',
-      image: 'https://via.placeholder.com/400x300/1e1e2e/06b6d4?text=JavaScript+Cert',
-      credentialUrl: '#'
+      title: 'Cyber Security and Applied Ethical Hacking',
+      issuer: 'Infosys Springboard',
+      date: '2024',
+      image: '/Portfolio/Cyber Security and Applied Ethical Hacking.jpg',
+      credentialUrl: 'https://verify.onwingspan.com/'
     },
     {
-      title: 'Responsive Web Design',
-      issuer: 'freeCodeCamp',
-      date: '2022',
-      image: 'https://via.placeholder.com/400x300/1e1e2e/10b981?text=Web+Design',
-      credentialUrl: '#'
-    },
-    {
-      title: 'Node.js Backend Development',
-      issuer: 'Coursera',
-      date: '2023',
-      image: 'https://via.placeholder.com/400x300/1e1e2e/f59e0b?text=Node.js+Cert',
-      credentialUrl: '#'
-    },
-    {
-      title: 'Advanced CSS and Sass',
-      issuer: 'Udemy',
-      date: '2022',
-      image: 'https://via.placeholder.com/400x300/1e1e2e/ec4899?text=CSS+Course',
-      credentialUrl: '#'
+      title: 'Learning Python',
+      issuer: 'Infosys Springboard',
+      date: '2025',
+      image: '/Portfolio/Learning Python.jpg',
+      credentialUrl: 'https://verify.onwingspan.com/'
     },
   ];
 
@@ -174,16 +167,16 @@ const Certifications = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto"
         >
           <div className="glass-card p-8 text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">6+</div>
+            <div className="text-4xl font-bold gradient-text mb-2">4+</div>
             <div className="text-gray-400 text-sm">Certifications</div>
           </div>
           <div className="glass-card p-8 text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">15+</div>
+            <div className="text-4xl font-bold gradient-text mb-2">3+</div>
             <div className="text-gray-400 text-sm">Projects Completed</div>
           </div>
           <div className="glass-card p-8 text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">2+</div>
-            <div className="text-gray-400 text-sm">Years Experience</div>
+            <div className="text-4xl font-bold gradient-text mb-2">0</div>
+            <div className="text-gray-400 text-sm">Months Experience</div>
           </div>
         </motion.div>
       </div>
