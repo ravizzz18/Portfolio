@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaReact, FaNode, FaPython, FaDatabase, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaJava } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiFirebase } from 'react-icons/si';
+import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiC, SiCplusplus } from 'react-icons/si';
 
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -12,18 +12,18 @@ const Skills = () => {
 
   // Skills data with proficiency levels
   const skillsData = [
-    { name: 'React', level: 90, icon: FaReact, color: '#61DAFB' },
+    { name: 'React', level: 80, icon: FaReact, color: '#61DAFB' },
     { name: 'JavaScript', level: 88, icon: SiJavascript, color: '#F7DF1E' },
-    { name: 'TypeScript', level: 82, icon: SiTypescript, color: '#3178C6' },
     { name: 'Node.js', level: 80, icon: FaNode, color: '#339933' },
     { name: 'HTML5', level: 95, icon: FaHtml5, color: '#E34F26' },
     { name: 'CSS3', level: 93, icon: FaCss3Alt, color: '#1572B6' },
-    { name: 'TailwindCSS', level: 90, icon: SiTailwindcss, color: '#06B6D4' },
     { name: 'MongoDB', level: 75, icon: SiMongodb, color: '#47A248' },
-    { name: 'Express', level: 78, icon: SiExpress, color: '#000000' },
     { name: 'Git', level: 85, icon: FaGitAlt, color: '#F05032' },
-    { name: 'Firebase', level: 72, icon: SiFirebase, color: '#FFCA28' },
     { name: 'Figma', level: 70, icon: FaFigma, color: '#F24E1E' },
+    {name : 'Python', level: 78, icon: FaPython, color: '#3776AB' },
+    {name : 'C', level: 85, icon: SiC, color: '#61DAFB' },
+    {name : 'C++', level: 90, icon: SiCplusplus, color: '#00599C' }
+
   ];
 
   return (
@@ -128,7 +128,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {/* Frontend */}
           <div className="glass-card p-6 text-center">
@@ -160,6 +160,17 @@ const Skills = () => {
             <h3 className="text-xl font-bold text-white mb-2">Database</h3>
             <p className="text-gray-400 text-sm">
               Designing efficient data structures and queries
+            </p>
+          </div>
+
+          {/* AI & ML */}
+          <div className="glass-card p-6 text-center">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-500/10 flex items-center justify-center">
+              <FaPython className="text-3xl text-purple-400" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">AI & ML</h3>
+            <p className="text-gray-400 text-sm">
+              Machine learning models and artificial intelligence solutions
             </p>
           </div>
         </motion.div>
