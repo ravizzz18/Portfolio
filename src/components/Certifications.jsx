@@ -167,16 +167,16 @@ const Certifications = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto"
         >
           <div className="glass-card p-8 text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">4+</div>
+            <div className="text-4xl font-bold gradient-text mb-2">5</div>
             <div className="text-gray-400 text-sm">Certifications</div>
           </div>
           <div className="glass-card p-8 text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">3+</div>
+            <div className="text-4xl font-bold gradient-text mb-2">2</div>
             <div className="text-gray-400 text-sm">Projects Completed</div>
           </div>
           <div className="glass-card p-8 text-center">
             <div className="text-4xl font-bold gradient-text mb-2">0</div>
-            <div className="text-gray-400 text-sm">Months Experience</div>
+            <div className="text-gray-400 text-sm">Experience</div>
           </div>
         </motion.div>
       </div>
