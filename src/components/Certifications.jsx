@@ -14,6 +14,13 @@ const Certifications = () => {
   // Certifications data
   const certifications = [
     {
+      title: 'Code Red 3.0 Hackathon Participation',
+      issuer: 'E-Cell, BMSIT&M',
+      date: '21st January 2026',
+      image: '/Code Red.png',
+      credentialUrl: '/Code Red.png'
+    },
+    {
       title: 'Workato Foundations Level 1',
       issuer: 'Workato',
       date: '2nd December 2025',
