@@ -98,7 +98,7 @@ const Navbar = () => {
           
           {/* Resume Button */}
           <a
-            href="/resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="neon-button text-sm"

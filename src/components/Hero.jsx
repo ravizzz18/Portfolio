@@ -98,7 +98,7 @@ const Hero = () => {
               className="flex flex-wrap gap-4 justify-center md:justify-start"
             >
               <a
-                href="/resume.pdf"
+                href="/Resume.pdf"
                 download
                 className="neon-button flex items-center gap-2"
               >
