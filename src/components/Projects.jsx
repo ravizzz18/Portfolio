@@ -21,15 +21,6 @@ const Projects = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Amazon Clone',
-      description: 'Amazon Landing Page Clone',
-      image: '/Screenshot 2025-12-03 232358.png',
-      tags: ['HTML', 'CSS'],
-      github: 'https://github.com/ravizzz18/Amazon-Clone.git',
-      demo: '#',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
       title: 'Number System Converter',
       description: 'My first ever project — a small Number System Converter (binary, decimal, hex, etc.).',
       image: '/Screenshot 2025-12-03 232127.png',
@@ -37,6 +28,15 @@ const Projects = () => {
       github: 'https://github.com/ravizzz18/Number-System-Converter.git',
       demo: 'https://number-system-converter-one.vercel.app/',
       color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Amazon Clone',
+      description: 'Amazon Landing Page Clone',
+      image: '/Screenshot 2025-12-03 232358.png',
+      tags: ['HTML', 'CSS'],
+      github: 'https://github.com/ravizzz18/Amazon-Clone.git',
+      demo: '#',
+      color: 'from-blue-500 to-cyan-500'
     },
   ];
 
