@@ -12,6 +12,15 @@ const Projects = () => {
   // Projects data
   const projects = [
     {
+      title: 'Smart Scheduling: Intelligent Student Time Management System',
+      description: 'An adaptive scheduling platform that revolutionizes student time management through AI-driven personalization, cognitive science principles, and institutional scheduling automation.',
+      image: '/st home.png',
+      tags: ['FastAPI', 'MongoDB', 'React', 'Tailwind CSS', 'Docker','TensorFlow'],
+      github: 'https://github.com/jadeja027/Smart-Scheduling.git',
+      demo: 'https://github.com/jadeja027/Smart-Scheduling.git',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
       title: 'Amazon Clone',
       description: 'Amazon Landing Page Clone',
       image: '/Screenshot 2025-12-03 232358.png',
