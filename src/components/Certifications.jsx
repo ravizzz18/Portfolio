@@ -14,6 +14,13 @@ const Certifications = () => {
   // Certifications data
   const certifications = [
     {
+      title: 'Artificial Intelligence Primer Certification',
+      issuer: 'Infosys Springboard',
+      date: '30th March 2026',
+      image: '/AI Certification.png',
+      credentialUrl: 'https://verify.onwingspan.com/'
+    },
+    {
       title: 'Code Red 3.0 Hackathon Participation',
       issuer: 'E-Cell, BMSIT&M',
       date: '21st January 2026',
@@ -33,6 +40,34 @@ const Certifications = () => {
       date: 'May 2025',
       image: '/Build and Conqueror.jpg',
       credentialUrl: '/Build and Conqueror.jpg'
+    },
+    {
+      title: 'Introduction to Data Science',
+      issuer: 'Infosys Springboard',
+      date: '30th March 2026',
+      image: '/DS.png',
+      credentialUrl: '/https://verify.onwingspan.com/'
+    },
+    {
+      title: 'Introduction Deep Learning',
+      issuer: 'Infosys Springboard',
+      date: '30th March 2026',
+      image: '/Deep Learning.png',
+      credentialUrl: '/https://verify.onwingspan.com/'
+    },
+    {
+      title: 'Introduction to Natural Language Processing',
+      issuer: 'Infosys Springboard',
+      date: '30th March 2026',
+      image: '/NLP.png',
+      credentialUrl: '/https://verify.onwingspan.com/'
+    },
+    {
+      title: 'Computer Vision 101',
+      issuer: 'Infosys Springboard',
+      date: '30th March 2026',
+      image: '/Computer Vision 101.png',
+      credentialUrl: '/https://verify.onwingspan.com/'
     },
     {
       title: 'Programming in C',
@@ -174,11 +209,11 @@ const Certifications = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto"
         >
           <div className="glass-card p-8 text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">5</div>
+            <div className="text-4xl font-bold gradient-text mb-2">1</div>
             <div className="text-gray-400 text-sm">Certifications</div>
           </div>
           <div className="glass-card p-8 text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">2</div>
+            <div className="text-4xl font-bold gradient-text mb-2">4</div>
             <div className="text-gray-400 text-sm">Projects Completed</div>
           </div>
           <div className="glass-card p-8 text-center">

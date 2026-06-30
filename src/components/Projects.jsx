@@ -30,12 +30,12 @@ const Projects = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Amazon Clone',
-      description: 'Amazon Landing Page Clone',
-      image: '/Screenshot 2025-12-03 232358.png',
-      tags: ['HTML', 'CSS'],
-      github: 'https://github.com/ravizzz18/Amazon-Clone.git',
-      demo: '#',
+      title: 'Smart Mess & Cafeteria Management System',
+      description: 'Developed a full-stack web application for managing campus cafeteria operations, enabling meal ordering, menu management, payment tracking, inventory management, and analytics using a relational database',
+      image: '/DBMS.png',
+      tags: ['Python', 'Flask', 'MySQL', 'Bootstrap 5', 'JavaScript', 'SQL'],
+      github: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git',
+      demo: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git',
       color: 'from-blue-500 to-cyan-500'
     },
   ];
