@@ -14,6 +14,13 @@ const Certifications = () => {
   // Certifications data
   const certifications = [
     {
+      title: 'IEEE AIDML 2026 – Paper Presentation',
+      issuer: 'IEEE International Conference',
+      date: '11th August 2026',
+      image: '/1904_Ravindra A_page-0001.jpg',
+      credentialUrl: 'https://drive.google.com/file/d/1bVKeQI_nwoTQvNNSbJA5VbXmWDMkA86S/view?usp=drive_link'
+    },
+    {
       title: 'Artificial Intelligence Primer Certification',
       issuer: 'Infosys Springboard',
       date: '30th March 2026',
