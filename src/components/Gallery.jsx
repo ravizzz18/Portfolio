@@ -37,7 +37,7 @@ const Gallery = () => {
   }, [selected, filtered]);
 
   return (
-    <section id="gallery" className="gallery-section section-frame">
+    <section id="gallery" className="gallery-section gallery-section--light section-frame">
       <div className="container">
         <div className="section-heading section-heading--light"><span className="section-index">05 /</span><h2>Frames of<br /><em>the journey.</em></h2></div>
         <div className="gallery-toolbar">

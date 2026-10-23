@@ -6,8 +6,6 @@ import { isSupabaseConfigured } from '../lib/supabase';
 const fallbackMilestones = [
   ['2026', 'IEEE AIDML — Paper Presentation', 'IEEE International Conference', '/1904_Ravindra A_page-0001.jpg'],
   ['2026', 'Artificial Intelligence Primer', 'Infosys Springboard', '/AI Certification.png'],
-  ['2026', 'Code Red 3.0 Hackathon', 'E-Cell, BMSIT&M', '/Code Red.png'],
-  ['2025', 'Build and Conquer — Winner', 'Alterino, BMSIT&M', '/Build and Conqueror.jpg'],
   ['2025', 'Workato Foundations Level 1', 'Workato', '/workato.jpg'],
 ];
 

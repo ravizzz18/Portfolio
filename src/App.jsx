@@ -10,12 +10,11 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Gallery from './components/Gallery';
 import AdminPortal from './components/AdminPortal';
-import LoadingScreen from './components/LoadingScreen';
 
 function App() {
   const isAdminRoute = window.location.pathname.replace(/\/+$/, '').split('/').pop() === 'admin';
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [isLoading, setIsLoading] = useState(!isAdminRoute);
+  const [heroIntroActive, setHeroIntroActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,21 +26,14 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isAdminRoute) return undefined;
-    const timer = window.setTimeout(() => setIsLoading(false), 350);
-    return () => window.clearTimeout(timer);
-  }, [isAdminRoute]);
-
   if (isAdminRoute) return <AdminPortal />;
 
   return (
-    <div className="site-shell">
-      <LoadingScreen visible={isLoading} />
+    <div className={`site-shell${heroIntroActive ? ' site-shell--intro' : ''}`}>
       <div className="progress-bar" style={{ width: `${scrollProgress}%` }} aria-hidden="true" />
-      <Navbar />
+      <Navbar introActive={heroIntroActive} />
       <main>
-        <Hero />
+        <Hero onIntroStateChange={setHeroIntroActive} />
         <About />
         <Skills />
         <Projects />

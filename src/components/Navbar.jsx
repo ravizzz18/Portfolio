@@ -10,7 +10,7 @@ const links = [
   { label: 'Contact', href: '#contact' },
 ];
 
-const Navbar = () => {
+const Navbar = ({ introActive = false }) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState('about');
@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`nav-wrap ${scrolled ? 'nav-wrap--scrolled' : ''}`}>
+    <header className={`nav-wrap${introActive ? ' nav-wrap--intro' : ''} ${scrolled ? 'nav-wrap--scrolled' : ''}`}>
       <nav className="nav container" aria-label="Primary navigation">
         <a className="monogram" href="#home" onClick={(event) => goTo(event, '#home')} aria-label="Ravindra A home">
           RAVINDRA<span></span>
