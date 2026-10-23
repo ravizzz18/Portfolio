@@ -5,23 +5,23 @@ import { getContent } from '../lib/contentApi';
 import { isSupabaseConfigured } from '../lib/supabase';
 
 const fallbackProjects = [
-  { number: '01', title: 'Smart Scheduling', type: 'AI-powered student time management system', description: 'An adaptive scheduling platform that combines personalization, cognitive science principles, and institutional scheduling automation.', image: '/st home.png', tags: ['FastAPI', 'MongoDB', 'React', 'TensorFlow'], github: 'https://github.com/jadeja027/Smart-Scheduling.git' },
-  { number: '02', title: 'Smart Mess', type: 'Campus cafeteria management system', description: 'A full-stack application for meal ordering, menu management, payment tracking, inventory, and analytics.', image: '/DBMS.png', tags: ['Python', 'Flask', 'MySQL', 'JavaScript'], github: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git' },
-  { number: '03', title: 'Number System Converter', type: 'A first step into building for the web', description: 'A focused utility for converting between binary, decimal, hexadecimal, and other number systems.', image: '/Screenshot 2025-12-03 232127.png', tags: ['HTML', 'CSS', 'JavaScript'], github: 'https://github.com/ravizzz18/Number-System-Converter.git', demo: 'https://number-system-converter-one.vercel.app/' },
+  { id: 'smart-scheduling', number: '01', title: 'Smart Scheduling', type: 'AI-powered student time management system', description: 'An adaptive scheduling platform that combines personalization, cognitive science principles, and institutional scheduling automation.', image: '/st home.png', tags: ['FastAPI', 'MongoDB', 'React', 'TensorFlow'], github: 'https://github.com/jadeja027/Smart-Scheduling.git' },
+  { id: 'smart-mess', number: '02', title: 'Smart Mess', type: 'Campus cafeteria management system', description: 'A full-stack application for meal ordering, menu management, payment tracking, inventory, and analytics.', image: '/DBMS.png', tags: ['Python', 'Flask', 'MySQL', 'JavaScript'], github: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git' },
+  { id: 'number-system-converter', number: '03', title: 'Number System Converter', type: 'A first step into building for the web', description: 'A focused utility for converting between binary, decimal, hexadecimal, and other number systems.', image: '/Screenshot 2025-12-03 232127.png', tags: ['HTML', 'CSS', 'JavaScript'], github: 'https://github.com/ravizzz18/Number-System-Converter.git', demo: 'https://number-system-converter-one.vercel.app/' },
 ];
 
 const Projects = () => {
   const [projects, setProjects] = useState(fallbackProjects);
   useEffect(() => {
-    if (isSupabaseConfigured) getContent('project').then((items) => { if (items.length) setProjects(items.map((item, index) => ({ ...item, number: String(index + 1).padStart(2, '0'), image: item.image_url, type: item.category, tags: item.tags || [] }))); }).catch((error) => console.error('Unable to load published projects.', error));
+    if (isSupabaseConfigured) getContent('project').then((items) => { if (items.length) setProjects(items.map((item, index) => ({ ...item, id: item.id, number: String(index + 1).padStart(2, '0'), image: item.image_url, type: item.category, tags: item.tags || [], github: item.github_url || item.github, demo: item.demo_url || item.demo }))); }).catch((error) => console.error('Unable to load published projects.', error));
   }, []);
   return <section id="projects" className="section-frame projects-section section-light">
     <div className="container">
       <div className="section-heading"><span className="section-index">03 /</span><h2>Selected<br /><em>work.</em></h2></div>
       <div className="project-grid">
         {projects.map((project, index) => (
-          <motion.article className={`project-card project-card--${index + 1}`} key={project.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .1 }}>
-            <div className="project-image"><img src={project.image} alt={`${project.title} project preview`} /><span>{project.number}</span></div>
+          <motion.article className="project-card" key={project.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .1 }}>
+            <div className="project-image"><img src={project.image || project.image_url} alt={`${project.title} project preview`} /><span>{project.number}</span></div>
             <div className="project-info"><div><p className="project-type">{project.type}</p><h3>{project.title}</h3></div><p>{project.description}</p><div className="project-footer"><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><div className="project-links"><a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}><FaGithub /></a>{project.demo && <a href={project.demo} target="_blank" rel="noreferrer" aria-label={`${project.title} live demo`}><FaArrowUp /></a>}</div></div></div>
           </motion.article>
         ))}

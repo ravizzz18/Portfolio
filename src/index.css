@@ -67,24 +67,22 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .about-meta span:last-child { grid-column: 2; color: var(--red); }
 .skills-section, .milestones-section { background: #111114; }
 .section-note { color: var(--muted); margin: -45px 0 70px 9%; font-size: .85rem; }
-.skill-groups { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
-.skill-group { padding: 28px 25px 28px 0; border-right: 1px solid var(--line); min-height: 220px; }
-.skill-group + .skill-group { padding-left: 25px; }
+.skill-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.skill-group { min-width: 0; min-height: 220px; padding: 28px; border: 1px solid var(--line); transition: border-color .25s, background-color .25s; }
+.skill-group:hover { border-color: rgba(255,59,29,.58); background: rgba(255,255,255,.02); }
 .skill-number { color: var(--red); font-size: .65rem; }
 .skill-group h3 { font: 2rem 'Anton', Impact, sans-serif; text-transform: uppercase; margin: 30px 0 24px; }
 .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-list span, .tag-list span { color: var(--muted); border: 1px solid var(--line); padding: 7px 9px; font-size: .67rem; }
 .projects-section { padding-bottom: 100px; }
-.project-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 60px 24px; }
-.project-card--2 { margin-top: 120px; }
-.project-card--3 { grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr .9fr; }
-.project-card--3 .project-image { height: 330px; }
-.project-image { position: relative; height: 390px; overflow: hidden; background: #d5d3cb; }
-.project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; filter: saturate(.75); }
+.project-grid { display: grid; gap: 72px; }
+.project-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: 'image info'; gap: 48px; align-items: center; min-width: 0; }
+.project-card:nth-child(even) { grid-template-areas: 'info image'; }
+.project-image { position: relative; grid-area: image; min-width: 0; aspect-ratio: 16 / 10; overflow: hidden; background: #d5d3cb; }
+.project-image img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .6s; filter: saturate(.75); }
 .project-card:hover .project-image img { transform: scale(1.045); }
 .project-image span { position: absolute; top: 16px; left: 18px; color: white; font: 2rem 'Anton'; text-shadow: 0 1px 8px #000; }
-.project-info { padding-top: 22px; }
-.project-card--3 .project-info { padding: 0 0 0 35px; align-self: center; }
+.project-info { grid-area: info; min-width: 0; padding: 0; }
 .project-type { color: var(--red); font-size: .67rem; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 10px; }
 .project-info h3 { font: 3rem/.95 'Anton', Impact, sans-serif; text-transform: uppercase; margin: 0; letter-spacing: -.02em; }
 .project-info > p { color: #686860; font-size: .85rem; line-height: 1.6; max-width: 430px; margin: 25px 0; }
@@ -149,14 +147,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .about-layout, .contact-layout { display: block; margin-left: 0; }
   .about-copy { margin-top: 38px; }
   .section-note { margin: -20px 0 40px; }
-  .skill-groups { display: block; }
-  .skill-group, .skill-group + .skill-group { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 0; min-height: auto; }
-  .project-grid { display: block; }
-  .project-card, .project-card--2 { margin: 0 0 60px; }
-  .project-card--3 { display: block; }
-  .project-card--3 .project-image { height: 250px; }
-  .project-card--3 .project-info { padding: 22px 0 0; }
-  .project-image { height: 250px; }
+  .skill-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .skill-group { padding: 22px; min-height: 210px; }
+  .project-grid { gap: 54px; }
+  .project-card, .project-card:nth-child(even) { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'image' 'info'; gap: 22px; align-items: start; }
+  .project-image { aspect-ratio: 16 / 10; }
   .project-info h3 { font-size: 2.4rem; }
   .project-footer { align-items: flex-start; flex-direction: column; }
   .milestone { grid-template-columns: 42px 70px 1fr; gap: 12px; }
@@ -167,6 +162,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .footer .container { flex-direction: column; }
 }
 @media (max-width: 420px) {
+  .skill-groups { grid-template-columns: 1fr; }
+  .skill-group { min-height: auto; }
   .hero-portrait { bottom: 218px; width: 190px; height: 285px; }
   .hero-name { top: 26%; }
 }
