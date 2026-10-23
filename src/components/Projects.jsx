@@ -1,176 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaArrowUp, FaGithub } from 'react-icons/fa';
 
-const Projects = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+const projects = [
+  { number: '01', title: 'Smart Scheduling', type: 'AI-powered student time management system', description: 'An adaptive scheduling platform that combines personalization, cognitive science principles, and institutional scheduling automation.', image: '/st home.png', tags: ['FastAPI', 'MongoDB', 'React', 'TensorFlow'], github: 'https://github.com/jadeja027/Smart-Scheduling.git' },
+  { number: '02', title: 'Smart Mess', type: 'Campus cafeteria management system', description: 'A full-stack application for meal ordering, menu management, payment tracking, inventory, and analytics.', image: '/DBMS.png', tags: ['Python', 'Flask', 'MySQL', 'JavaScript'], github: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git' },
+  { number: '03', title: 'Number System Converter', type: 'A first step into building for the web', description: 'A focused utility for converting between binary, decimal, hexadecimal, and other number systems.', image: '/Screenshot 2025-12-03 232127.png', tags: ['HTML', 'CSS', 'JavaScript'], github: 'https://github.com/ravizzz18/Number-System-Converter.git', demo: 'https://number-system-converter-one.vercel.app/' },
+];
 
-  // Projects data
-  const projects = [
-    {
-      title: 'Smart Scheduling: Intelligent Student Time Management System',
-      description: 'An adaptive scheduling platform that revolutionizes student time management through AI-driven personalization, cognitive science principles, and institutional scheduling automation.',
-      image: '/st home.png',
-      tags: ['FastAPI', 'MongoDB', 'React', 'Tailwind CSS', 'Docker','TensorFlow'],
-      github: 'https://github.com/jadeja027/Smart-Scheduling.git',
-      demo: 'https://github.com/jadeja027/Smart-Scheduling.git',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Number System Converter',
-      description: 'My first ever project — a small Number System Converter (binary, decimal, hex, etc.).',
-      image: '/Screenshot 2025-12-03 232127.png',
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      github: 'https://github.com/ravizzz18/Number-System-Converter.git',
-      demo: 'https://number-system-converter-one.vercel.app/',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Smart Mess & Cafeteria Management System',
-      description: 'Developed a full-stack web application for managing campus cafeteria operations, enabling meal ordering, menu management, payment tracking, inventory management, and analytics using a relational database',
-      image: '/DBMS.png',
-      tags: ['Python', 'Flask', 'MySQL', 'Bootstrap 5', 'JavaScript', 'SQL'],
-      github: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git',
-      demo: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git',
-      color: 'from-blue-500 to-cyan-500'
-    },
-  ];
-
-  return (
-    <section id="projects" className="section-padding relative">
-      <div className="container mx-auto px-6" ref={ref}>
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
-            Featured Projects
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            A selection of my recent work and personal projects
-          </p>
-        </motion.div>
-
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card overflow-hidden group"
-            >
-              {/* Project Image */}
-              <div className="relative overflow-hidden h-48">
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
-                />
-                
-                {/* Overlay on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-300 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FaGithub className="text-white text-xl" />
-                  </motion.a>
-                  <motion.a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FaExternalLinkAlt className="text-white text-xl" />
-                  </motion.a>
-                </div>
-
-                {/* Gradient Accent */}
-                <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.color}`}></div>
-              </div>
-
-              {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-3 py-1 text-xs bg-primary/10 border border-primary/30 text-primary rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 py-2 px-4 border border-primary text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-all duration-300 text-center"
-                  >
-                    Code
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 py-2 px-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg text-sm font-medium hover:shadow-neon-blue transition-all duration-300 text-center"
-                  >
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* View More Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12"
-        >
-          <a
-            href="https://github.com/ravizzz18"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block neon-button"
-          >
-            View More Projects
-          </a>
-        </motion.div>
+const Projects = () => (
+  <section id="projects" className="section-frame projects-section section-light">
+    <div className="container">
+      <div className="section-heading"><span className="section-index">03 /</span><h2>Selected<br /><em>work.</em></h2></div>
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <motion.article className={`project-card project-card--${index + 1}`} key={project.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .1 }}>
+            <div className="project-image"><img src={project.image} alt={`${project.title} project preview`} /><span>{project.number}</span></div>
+            <div className="project-info"><div><p className="project-type">{project.type}</p><h3>{project.title}</h3></div><p>{project.description}</p><div className="project-footer"><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><div className="project-links"><a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}><FaGithub /></a>{project.demo && <a href={project.demo} target="_blank" rel="noreferrer" aria-label={`${project.title} live demo`}><FaArrowUp /></a>}</div></div></div>
+          </motion.article>
+        ))}
       </div>
-    </section>
-  );
-};
+      <a className="text-link" href="https://github.com/ravizzz18" target="_blank" rel="noreferrer">View all on GitHub <FaArrowUp /></a>
+    </div>
+  </section>
+);
 
 export default Projects;

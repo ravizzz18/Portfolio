@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,59 +7,34 @@ import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Preloader from './components/Preloader';
 import ScrollToTop from './components/ScrollToTop';
-import ParticleBackground from './components/ParticleBackground';
 
 function App() {
-  const [loading, setLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Preloader Effect
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2500);
-  }, []);
-
-  // Scroll Progress Bar
   useEffect(() => {
     const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
-      setScrollProgress(progress);
+      const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(pageHeight > 0 ? (window.scrollY / pageHeight) * 100 : 0);
     };
-
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  if (loading) {
-    return <Preloader />;
-  }
-
   return (
-    <div className="relative">
-      {/* Scroll Progress Bar */}
-      <div 
-        className="progress-bar" 
-        style={{ width: `${scrollProgress}%` }}
-      />
-      
-      {/* Particle Background */}
-      <ParticleBackground />
-      
-      {/* Main Content */}
+    <div className="site-shell">
+      <div className="progress-bar" style={{ width: `${scrollProgress}%` }} aria-hidden="true" />
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Certifications />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Certifications />
+        <Contact />
+      </main>
       <Footer />
-      
-      {/* Scroll to Top Button */}
       <ScrollToTop />
     </div>
   );
