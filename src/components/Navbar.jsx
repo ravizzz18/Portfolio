@@ -3,8 +3,10 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 const links = [
   { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Journey', href: '#certifications' },
+  { label: 'Certifications', href: '#certifications' },
+  { label: 'Gallery', href: '#gallery' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -36,7 +38,7 @@ const Navbar = () => {
     <header className={`nav-wrap ${scrolled ? 'nav-wrap--scrolled' : ''}`}>
       <nav className="nav container" aria-label="Primary navigation">
         <a className="monogram" href="#home" onClick={(event) => goTo(event, '#home')} aria-label="Ravindra A home">
-          RA<span>.</span>
+          RAVINDRA<span></span>
         </a>
         <div className={`nav-links ${open ? 'nav-links--open' : ''}`}>
           {links.map((link) => (

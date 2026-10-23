@@ -8,6 +8,8 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Gallery from './components/Gallery';
+import AdminPortal from './components/AdminPortal';
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -22,6 +24,8 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  if (window.location.pathname.replace(/\/+$/, '').split('/').pop() === 'admin') return <AdminPortal />;
+
   return (
     <div className="site-shell">
       <div className="progress-bar" style={{ width: `${scrollProgress}%` }} aria-hidden="true" />
@@ -32,6 +36,7 @@ function App() {
         <Skills />
         <Projects />
         <Certifications />
+        <Gallery />
         <Contact />
       </main>
       <Footer />

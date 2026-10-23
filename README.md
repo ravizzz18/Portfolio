@@ -353,3 +353,21 @@ If you need help, feel free to:
 **Made with ❤️ using React + Tailwind + Framer Motion**
 
 **Happy Coding! 🚀**
+# Admin portal and gallery
+
+The portfolio now includes an optional Supabase-backed gallery and admin portal. The public site continues to work with the checked-in portfolio assets when Supabase is not configured.
+
+## Supabase setup
+
+1. Create a Supabase project and run [`supabase/schema.sql`](./supabase/schema.sql) in the SQL editor.
+2. Create an Auth user for the administrator. In the Supabase dashboard, set that user's `app_metadata` to `{"role":"admin"}` using the Auth user editor or a trusted server-side admin workflow. Never put a service-role key in this repository.
+3. Copy `.env.example` to `.env.local` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
+4. Start the site with `npm run dev`, then open `/admin` to sign in.
+
+The schema enables row-level security. Visitors can only read published rows and public gallery images. Only authenticated users whose server-issued `app_metadata.role` is `admin` can write content or storage objects. Supabase validates the database and storage permissions; the frontend is not treated as a security boundary. The publishable key is safe for browser use, but it does not grant admin access.
+
+## Deployment
+
+GitHub Pages remains suitable for the public Vite build. It cannot securely host the backend, so Supabase remains the authentication, database, and storage provider. Configure the same two `VITE_` variables in the build environment if the deployed public gallery should load managed content. The anon key is intended for browser use; do not expose a service-role key. For reliable `/admin` deep links, deploy the admin route on a host with SPA fallback or use the existing static site host with its project-path configuration.
+
+The admin supports gallery, project, and certificate records; image uploads are restricted client-side to JPG, PNG, WebP, and AVIF under 8 MB and are also protected by storage policies. Public gallery images are lazy-loaded and opened in an accessible keyboard/touch lightbox.

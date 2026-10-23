@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowUp, FaGithub } from 'react-icons/fa';
+import { getContent } from '../lib/contentApi';
+import { isSupabaseConfigured } from '../lib/supabase';
 
-const projects = [
+const fallbackProjects = [
   { number: '01', title: 'Smart Scheduling', type: 'AI-powered student time management system', description: 'An adaptive scheduling platform that combines personalization, cognitive science principles, and institutional scheduling automation.', image: '/st home.png', tags: ['FastAPI', 'MongoDB', 'React', 'TensorFlow'], github: 'https://github.com/jadeja027/Smart-Scheduling.git' },
   { number: '02', title: 'Smart Mess', type: 'Campus cafeteria management system', description: 'A full-stack application for meal ordering, menu management, payment tracking, inventory, and analytics.', image: '/DBMS.png', tags: ['Python', 'Flask', 'MySQL', 'JavaScript'], github: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git' },
   { number: '03', title: 'Number System Converter', type: 'A first step into building for the web', description: 'A focused utility for converting between binary, decimal, hexadecimal, and other number systems.', image: '/Screenshot 2025-12-03 232127.png', tags: ['HTML', 'CSS', 'JavaScript'], github: 'https://github.com/ravizzz18/Number-System-Converter.git', demo: 'https://number-system-converter-one.vercel.app/' },
 ];
 
-const Projects = () => (
-  <section id="projects" className="section-frame projects-section section-light">
+const Projects = () => {
+  const [projects, setProjects] = useState(fallbackProjects);
+  useEffect(() => {
+    if (isSupabaseConfigured) getContent('project').then((items) => { if (items.length) setProjects(items.map((item, index) => ({ ...item, number: String(index + 1).padStart(2, '0'), image: item.image_url, type: item.category, tags: item.tags || [] }))); }).catch((error) => console.error('Unable to load published projects.', error));
+  }, []);
+  return <section id="projects" className="section-frame projects-section section-light">
     <div className="container">
       <div className="section-heading"><span className="section-index">03 /</span><h2>Selected<br /><em>work.</em></h2></div>
       <div className="project-grid">
@@ -22,7 +28,7 @@ const Projects = () => (
       </div>
       <a className="text-link" href="https://github.com/ravizzz18" target="_blank" rel="noreferrer">View all on GitHub <FaArrowUp /></a>
     </div>
-  </section>
-);
+  </section>;
+};
 
 export default Projects;
