@@ -12,7 +12,8 @@ const About = () => (
         <motion.div className="about-copy" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <p>My work lives across frontend development and AI/ML. I care about responsive interfaces, clear systems, and the small details that make a digital experience feel intentional.</p>
           <p>When I’m not building, I’m exploring new technology, playing football, listening to good music, or spending time with people I care about.</p>
-          <div className="about-meta"><span>Currently</span><strong>P R Team — Alterino, BMSIT&M</strong><span>2025 — present</span></div>
+          <div className="about-meta"><span>Currently</span><strong>Vice President — Alterino, BMSIT&M</strong><span>Oct 2026 — present</span></div>
+          <div className="about-meta"><span>Previously</span><strong>P R Team — Alterino, BMSIT&M</strong><span>Sep 2025 — OCt 2026</span></div>
         </motion.div>
       </div>
     </div>
