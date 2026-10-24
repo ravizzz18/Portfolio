@@ -68,6 +68,32 @@ export async function updateContent(type, id, changes) {
   return data;
 }
 
+export async function reorderContent(type, orderedItems) {
+  if (!supabase) throw new Error('Configure Supabase before saving the order.');
+  const originalOrders = new Map(orderedItems.map((item) => [item.id, item.display_order]));
+  const temporaryOffset = Date.now();
+  const updates = orderedItems.map((item, index) => ({ id: item.id, order: index }));
+
+  try {
+    await Promise.all(updates.map(({ id }, index) => (
+      updateContent(type, id, { display_order: -(temporaryOffset + index + 1) })
+    )));
+    await Promise.all(updates.map(({ id, order }) => (
+      updateContent(type, id, { display_order: order })
+    )));
+  } catch (error) {
+    try {
+      await Promise.all(Array.from(originalOrders, ([id, display_order]) => (
+        updateContent(type, id, { display_order })
+      )));
+    } catch (rollbackError) {
+      console.error('Unable to restore the previous content order.', rollbackError);
+      throw new Error(`${getError(error, 'Unable to save the content order.')} The previous order could not be restored.`);
+    }
+    throw new Error(getError(error, 'Unable to save the content order.'));
+  }
+}
+
 export async function deleteContent(type, id) {
   if (!supabase) throw new Error('Configure Supabase before deleting content.');
   const table = type === 'gallery' ? 'gallery_items' : 'content_items';
