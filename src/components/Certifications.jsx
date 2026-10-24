@@ -4,10 +4,7 @@ import { getContent } from '../lib/contentApi';
 import { isSupabaseConfigured } from '../lib/supabase';
 
 const fallbackMilestones = [
-  ['2026', 'IEEE AIDML — Paper Presentation', 'IEEE International Conference', '/1904_Ravindra A_page-0001.jpg'],
-  ['2026', 'Artificial Intelligence Primer', 'Infosys Springboard', '/AI Certification.png'],
-  ['2025', 'Workato Foundations Level 1', 'Workato', '/workato.jpg'],
-];
+ ];
 
 const Certifications = () => {
   const [milestones, setMilestones] = useState(fallbackMilestones);
