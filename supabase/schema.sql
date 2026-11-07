@@ -26,11 +26,16 @@ create table if not exists public.content_items (
   alt_text text not null,
   date date,
   tags text[] not null default '{}',
+  github_url text,
+  demo_url text,
   display_order integer not null default 0,
   published boolean not null default false,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.content_items add column if not exists github_url text;
+alter table public.content_items add column if not exists demo_url text;
 
 alter table public.gallery_items enable row level security;
 alter table public.content_items enable row level security;

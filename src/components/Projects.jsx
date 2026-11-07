@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowUp, FaGithub } from 'react-icons/fa';
+import { FaArrowUp, FaGithub, FaGlobe } from 'react-icons/fa';
 import { getContent } from '../lib/contentApi';
 import { isSupabaseConfigured } from '../lib/supabase';
 
@@ -19,7 +19,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.article className="project-card" key={project.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .1 }}>
             <div className="project-image"><img src={project.image || project.image_url} alt={`${project.title} project preview`} /><span>{project.number}</span></div>
-            <div className="project-info"><div><p className="project-type">{project.type}</p><h3>{project.title}</h3></div><p>{project.description}</p><div className="project-footer"><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><div className="project-links"><a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}><FaGithub /></a>{project.demo && <a href={project.demo} target="_blank" rel="noreferrer" aria-label={`${project.title} live demo`}><FaArrowUp /></a>}</div></div></div>
+            <div className="project-info"><div><p className="project-type">{project.type}</p><h3>{project.title}</h3></div><p>{project.description}</p><div className="project-footer"><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><div className="project-links">{project.github && <a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}><FaGithub /></a>}{project.demo && <a href={project.demo} target="_blank" rel="noreferrer" aria-label={`${project.title} live website`}><FaGlobe /></a>}</div></div></div>
           </motion.article>
         ))}
       </div>
