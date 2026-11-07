@@ -5,10 +5,7 @@ import { getContent } from '../lib/contentApi';
 import { isSupabaseConfigured } from '../lib/supabase';
 
 const fallbackProjects = [
-  { id: 'smart-scheduling', number: '01', title: 'Smart Scheduling', type: 'AI-powered student time management system', description: 'An adaptive scheduling platform that combines personalization, cognitive science principles, and institutional scheduling automation.', image: '/st home.png', tags: ['FastAPI', 'MongoDB', 'React', 'TensorFlow'], github: 'https://github.com/jadeja027/Smart-Scheduling.git' },
-  { id: 'smart-mess', number: '02', title: 'Smart Mess', type: 'Campus cafeteria management system', description: 'A full-stack application for meal ordering, menu management, payment tracking, inventory, and analytics.', image: '/DBMS.png', tags: ['Python', 'Flask', 'MySQL', 'JavaScript'], github: 'https://github.com/ravizzz18/Smart-Mess-Cafeteria-Management-System.git' },
-  { id: 'number-system-converter', number: '03', title: 'Number System Converter', type: 'A first step into building for the web', description: 'A focused utility for converting between binary, decimal, hexadecimal, and other number systems.', image: '/Screenshot 2025-12-03 232127.png', tags: ['HTML', 'CSS', 'JavaScript'], github: 'https://github.com/ravizzz18/Number-System-Converter.git', demo: 'https://number-system-converter-one.vercel.app/' },
-];
+ ];
 
 const Projects = () => {
   const [projects, setProjects] = useState(fallbackProjects);
